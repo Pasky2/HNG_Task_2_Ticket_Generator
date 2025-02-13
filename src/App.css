@@ -1,0 +1,9 @@
+body {
+  background-image: linear-gradient(to bottom right, #02191d, #083037, #24a0b5);
+  padding: 10px 10px;
+}
+
+.upload {
+  background-image: url('./assets/bg.png');
+}
+
