@@ -56,14 +56,14 @@ const TicketSelection = ({formData, setFormData, initialState }) => {
             <p className="text-gray-300 text-sm md:text-md">
               Join us for an unforgettable experience at
             </p>
-            <p className="text-gray-300 text-sm md:text-lg"><span></span> Techember Fest "25</p>
-            <p className="text-gray-300 text-sm md:text-lg">[Event Location] || March 15, 2025 | 7:00 PM</p>
+            <p className="text-gray-300 text-xs md:text-sm"><span></span> Techember Fest "25</p>
+            <p className="text-gray-300 text-xs md:text-sm">[Event Location] || March 15, 2025 | 7:00 PM</p>
           </div>
 
           <hr className="text-gray-600 mb-4" />
 
           <div className="text-gray-300 p-2 mb-6">
-            <p className="mb-2 text-sm md:text-lg">Select Ticket Type:</p>
+            <p className="mb-2 text-xs md:text-sm">Select Ticket Type:</p>
             <div className="bg-gray-900 p-4 border border-gray-600 rounded-2xl md:grid grid-cols-2 gap-2">
               {[
                 { type: "REGULAR", price: "Free" },
@@ -84,7 +84,7 @@ const TicketSelection = ({formData, setFormData, initialState }) => {
           </div>
 
           <div className="w-full mb-4">
-            <p className="text-gray-300 mb-2 text-sm md:text-lg">Number of Tickets: {formData.tickets}</p>
+            <p className="text-gray-300 mb-2 text-xs md:text-sm">Number of Tickets: {formData.tickets}</p>
             <select className="w-full border border-gray-600 rounded-md px-4 py-2 text-gray-300 focus:outline-0" onChange={(e) => setFormData({...formData, tickets:e.target.value})}>
               <option className="text-gray-300 bg-gray-800">1</option>
               <option className="text-gray-300 bg-gray-800">2</option>

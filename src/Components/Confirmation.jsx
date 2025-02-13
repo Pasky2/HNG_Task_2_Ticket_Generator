@@ -70,7 +70,7 @@ const Confirmation = ({ formData, setFormData, initialState }) => {
           </nav>
         </div>
 
-        <div className="bg-white py-2 px-3 rounded-md flex justify-center items-center">
+        <div className="bg-white py-2 px-3 rounded-md flex justify-center items-center ">
           <button className="text-gray-500 text-xs">
             MY TICKETS <span></span>
           </button>
@@ -79,7 +79,7 @@ const Confirmation = ({ formData, setFormData, initialState }) => {
 
       <main className=" grid place-items-center m-8">
         <div
-          className="bg-transparent p-6 border border-gray-600 rounded-2xl shadow-lg"
+          className="bg-transparent p-6 border border-gray-600 rounded-2xl shadow-lg "
           ref={pdfRef}
         >
           <div>
@@ -137,7 +137,7 @@ const Confirmation = ({ formData, setFormData, initialState }) => {
                         <p className="text-sm text-gray-500">
                           Enter your email:
                         </p>
-                        <p className="font-medium text-gray-300 text-sm">
+                        <p className="font-medium text-gray-300 text-xs md:text-sm">
                           {formData.email}
                         </p>
                       </div>
@@ -158,7 +158,7 @@ const Confirmation = ({ formData, setFormData, initialState }) => {
                     <p className="text-sm text-gray-500 mt-2">
                       Special requests?:
                     </p>
-                    <p className="font-medium text-gray-300 text-sm">
+                    <p className="text-wrap font-medium text-gray-300 text-xs md:text-sm ">
                       {formData.details}
                     </p>
                   </div>
