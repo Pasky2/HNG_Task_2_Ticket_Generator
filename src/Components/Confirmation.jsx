@@ -8,6 +8,7 @@ import "../App.css";
 
 const Confirmation = ({ formData, setFormData, initialState }) => {
   const navigate = useNavigate();
+  
   useEffect(() => {
     const savedData = localStorage.getItem("ticketFormData");
     if (savedData) {
@@ -42,7 +43,7 @@ const Confirmation = ({ formData, setFormData, initialState }) => {
         imgWidth * ratio,
         imgHeight * ratio
       );
-      pdf.save("invoice.pdf");
+      pdf.save("ticket.pdf");
     });
   };
 
@@ -171,7 +172,7 @@ const Confirmation = ({ formData, setFormData, initialState }) => {
             <button
               onClick={downloadForm}
               type="submit"
-              className="hover:bg-blue-500 w-full border border-gray-600 py-2 px-12 rounded-md text-gray-300 font-bold cursor-pointer text-sm"
+              className="bg-blue-500 w-full border border-gray-600 py-2 px-12 rounded-md text-gray-300 font-bold cursor-pointer text-sm"
             >
               Download
             </button>

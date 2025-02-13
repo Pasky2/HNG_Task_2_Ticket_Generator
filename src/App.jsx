@@ -11,7 +11,7 @@ import "./App.css";
 
 export default function App() {
   const initialState = {
-    ticketType: "Regular",
+    ticketType: "REGULAR",
     tickets: 1,
     name: "",
     email: "",

@@ -11,6 +11,8 @@ const AttendeeDetails = ({formData, setFormData }) => {
   const [errors, setErrors] = useState({});
   const [ loading, setLoading] = useState(false)
 
+
+
   useEffect(() => {
     const savedData = localStorage.getItem("ticketFormData");
     if (savedData) {
@@ -43,7 +45,7 @@ const AttendeeDetails = ({formData, setFormData }) => {
     data.append('upload_preset', 'Ticket_Generator')
     data.append('cloud_name', 'dst52te1o')
 
-    const res = await fetch('https://api.cloudinary.com/v1_1/dst52te1o/image/upload', {
+    const res = await fetch(`https://api.cloudinary.com/v1_1/dst52te1o/image/upload`, {
       method: 'POST',
       body: data
     })
@@ -107,12 +109,7 @@ const AttendeeDetails = ({formData, setFormData }) => {
                 <label className="text-sm">Upload Profile Photo</label>
                 <div className="bg-gray-900 rounded-sm grid place-items-center mt-2">
                   <div>
-                  {errors.profilePic && <p className="text-red-500 text-xs">{errors.profilePic}</p>}
-                  <div className="upload-icon">
-                    {
-                      loading ? "Uploading..." : <img src="" alt="Upload Icon" />
-                    }
-                  </div>
+                  
                   <input
                     type="file"
                     accept="image/jpeg,image/jpg,image/png"
@@ -120,6 +117,7 @@ const AttendeeDetails = ({formData, setFormData }) => {
                     onChange={handleFileUpload}
                   />
                   </div>
+                  {errors.profilePic && <p className="text-red-500 text-xs">{errors.profilePic}</p>}
                 </div>
               </div>
               
@@ -182,7 +180,7 @@ const AttendeeDetails = ({formData, setFormData }) => {
 
 
               <div className="mt-3 w-full gap-4 flex flex-col md:flex-row-reverse justify-evenly items-center">
-                <button type="submit" className="hover:bg-blue-500 w-full border border-gray-600 py-2 px-12 rounded-md text-gray-300 font-medium cursor-pointer text-sm">
+                <button type="submit" className="bg-blue-500 w-full border border-gray-600 py-2 px-12 rounded-md text-gray-300 font-medium cursor-pointer text-sm">
                   Get My Free Ticket
                 </button>
                 <button className="hover:bg-blue-500 w-full border border-gray-600 py-2 px-12 rounded-md text-gray-300 font-medium cursor-pointer text-sm" onClick={handleBack}>
